@@ -12,7 +12,7 @@
         <h1>Tire principal</h1>
 
         <?php
-            require_once 'classes\Utilisateur.php';
+            require_once 'classes/Utilisateur.php';
             require_once 'classes\Admin.php';
 
             $pierre = new Admin('Pierre', 'abcdef');

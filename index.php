@@ -1,3 +1,7 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Cours PHP
 <?php
 require_once 'classes/Utilisateur.php';
 require_once 'classes/Admin.php';

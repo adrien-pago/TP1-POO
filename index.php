@@ -12,7 +12,7 @@
         <h1>Tire principal</h1>
 
         <?php
-            require_once 'classes/Utilisateur.php';
+            require_once 'classes\Utilisateur.php';
             require_once 'classes\Admin.php';
 
             $pierre = new Admin('Pierre', 'abcdef');
@@ -24,7 +24,7 @@
             $pierre->setBan('paul');
             $pierre->setBan('Jean');
             echo $pierre->getBan()
-        ?>
+        ?>.
         <p>Un paragraphe</p>
     </body>
 </html>

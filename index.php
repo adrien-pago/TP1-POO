@@ -10,7 +10,7 @@
 
     <body>
         <h1>Connexion</h1>
-        <form action="classes/login.php" method="post">
+        <form action="classes\login.php" method="post">
             Nom d'utilisateur: <input type="text" name="username"><br>
             Mot de passe: <input type="password" name="password"><br>
             <input type="submit" value="Se connecter">

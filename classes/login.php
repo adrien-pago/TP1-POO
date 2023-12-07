@@ -1,4 +1,4 @@
-!doctype html>
+<!doctype html>
 <html>
     <head>
         <title> Cours PHP & MySQL  </title>
@@ -10,7 +10,7 @@
 
     <body>
         <h1>Bannissement</h1>
-        <form action="banUser.php" method="post">
+        <form action="classes/banUser.php" method="post">
             Nom de l'utilisateur à bannir: <input type="text" name="usernameToBan"><br>
             <input type="submit" value="Bannir">
         </form>

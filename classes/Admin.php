@@ -21,9 +21,5 @@
         }
 
     }
-// script
-$bannedUsers = $admin->getBannedUsers();
-foreach ($bannedUsers as $user) {
-    echo $user . "<br>";
-}
+
 ?>

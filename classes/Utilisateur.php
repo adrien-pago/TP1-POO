@@ -1,16 +1,20 @@
 <?php
-class Utilisateur {
-    private $nomUtilisateur;
-    private $motDePasse;
-    
+    class Utilisateur {
+        protected $user_name;
+        protected $user_pass;
 
-    public function __construct($nomUtilisateur, $motDePasse) {
-        $this->nomUtilisateur = $nomUtilisateur;
-        $this->motDePasse = $motDePasse;
+        public function __construct($n, $p){
+            $this->user_name =$n;
+            $this->user_pass =$p;
+        }
+
+        public function __destruct(){
+
+        }
+
+        public function getNom(){
+            return $this->user_name;
+        }
     }
-
-    // Getters et setters
-    // Autres méthodes (connexion, déconnexion, etc.)
-}
 ?>
 

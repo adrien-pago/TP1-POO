@@ -1,13 +1,18 @@
 <?php
-require_once 'Utilisateur.php';
+    require_once 'Utilisateur.php';
 
-class Admin extends Utilisateur {
-    // Propriétés spécifiques à Admin
+    class Admin extends Utilisateur {
+        protected $ban;
 
-    public function __construct($nomUtilisateur, $motDePasse) {
-        parent::__construct($nomUtilisateur, $motDePasse);
+        public function setBan($b){
+            $this ->ban[] =$b;
+        }
+
+        public function getBan(){
+            echo'Utilisateur bannis par' .$this->user_name. ' : ';
+            foreach($this->ban as $valeur){
+                echo $valeur .', ';
+            }
+        }
     }
-
-    // Méthodes spécifiques à Admin (bannir un utilisateur, etc.)
-}
 ?>

@@ -1,11 +1,12 @@
 <?php
     require_once 'Utilisateur.php';
 
+    session_start();
     class Admin extends Utilisateur {
         protected $ban;
 
-        public function setBan($b){
-            $this ->ban[] =$b;
+        public function setBan($userToBan) {
+            $_SESSION['bannedUsers'][] = $userToBan;
         }
 
         public function getBan(){
@@ -16,7 +17,13 @@
         }
 
         public function getBannedUsers() {
-            return $this->ban;
+            return $_SESSION['bannedUsers'] ?? [];
         }
+
     }
+// script
+$bannedUsers = $admin->getBannedUsers();
+foreach ($bannedUsers as $user) {
+    echo $user . "<br>";
+}
 ?>

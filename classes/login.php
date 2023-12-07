@@ -21,7 +21,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-
+        //pour l'exemple on met pierre en admin le seul à pouvoir bannir
         if ($username == 'Pierre' && $password == 'abcdef') {
             $user = new Admin($username, $password);
         

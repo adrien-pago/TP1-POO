@@ -14,5 +14,9 @@
                 echo $valeur .', ';
             }
         }
+
+        public function getBannedUsers() {
+            return $this->ban;
+        }
     }
 ?>

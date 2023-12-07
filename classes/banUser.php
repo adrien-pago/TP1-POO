@@ -1,6 +1,6 @@
 <?php
-require_once 'classes/Utilisateur.php';
-require_once 'classes/Admin.php';
+require_once 'Utilisateur.php';
+require_once 'Admin.php';
 
 //verif Admin 'pierre' pour l'exemple
 $admin = new Admin('Pierre', 'abcdef'); 

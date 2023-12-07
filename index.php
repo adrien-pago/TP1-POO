@@ -9,7 +9,7 @@
     </head>  
 
     <body>
-        <h1>Tire principal</h1>
+        <h1>Connexion</h1>
         <form action="login.php" method="post">
             Nom d'utilisateur: <input type="text" name="username"><br>
             Mot de passe: <input type="password" name="password"><br>

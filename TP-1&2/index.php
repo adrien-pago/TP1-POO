@@ -26,29 +26,30 @@
             $mathilde =new Admin('Math', 123456, 'Nord');
             $Florian =new Abonne('Flo', 'flotri','Est');
 
-            $Pierre->setPrixAbo();
+            $pierre->setPrixAbo();
             $mathilde->setPrixabo();
             $Florian->setPrixabo();
 
             
-            echo 'Prix de l\'abonnement pour ';
-            $pierre->getNom();
-            echo ' : ';
-            $pierre->getPrixAbo();
-            echo '<vr>Prix de l\'abonnement pour ';
-            $mathilde->getNom();
-            echo ' : ';
-            $mathilde->getPrixAbo();
-            echo '<vr>Prix de l\'abonnement pour ';
-            $Florian->getNom();
-            echo ' : ';
-            $Florian->getPrixAbo();
+            // echo '<br>Prix de l\'abonnement pour ';
+            // $pierre->getNom();
+            // echo ' : ';
+            // $pierre->getPrixAbo();
+            // echo '<br>Prix de l\'abonnement pour ';
+            // $mathilde->getNom();
+            // echo ' : ';
+            // $mathilde->getPrixAbo();
+            // echo '<br>Prix de l\'abonnement pour ';
+            // $Florian->getNom();
+            // echo ' : ';
+            // $Florian->getPrixAbo();
 
             $listeUtilisateurs = [$pierre, $mathilde, $Florian];
 
             // Afficher la liste des utilisateurs
             foreach ($listeUtilisateurs as $utilisateur) {
                 echo $utilisateur;
+                echo '<br>';
             }
         ?>
         <p>Un paragraphe</p>

@@ -26,5 +26,9 @@
 
             }
          }
+         
+        public function __toString(){
+            echo ( $n, $p, $r);
+        }
      }
 ?>

@@ -28,7 +28,7 @@
          }
          
         public function __toString(){
-            echo ( $n, $p, $r);
+            echo $this( $n, $p, $r);
         }
      }
 ?>

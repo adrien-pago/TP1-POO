@@ -30,19 +30,6 @@
             $mathilde->setPrixabo();
             $Florian->setPrixabo();
 
-            
-            // echo '<br>Prix de l\'abonnement pour ';
-            // $pierre->getNom();
-            // echo ' : ';
-            // $pierre->getPrixAbo();
-            // echo '<br>Prix de l\'abonnement pour ';
-            // $mathilde->getNom();
-            // echo ' : ';
-            // $mathilde->getPrixAbo();
-            // echo '<br>Prix de l\'abonnement pour ';
-            // $Florian->getNom();
-            // echo ' : ';
-            // $Florian->getPrixAbo();
 
             $listeUtilisateurs = [$pierre, $mathilde, $Florian];
 

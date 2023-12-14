@@ -20,7 +20,7 @@
         <?php
             require 'classes/Utilisateur.php';
             require 'classes/Admin.php';
-            require 'classes/Abonne';
+            require 'classes/Abonne.php';
 
             $pierre = new Admin('Pierre', 'abcdef', 'Sud');
             $mathilde =new Admin('Math', 123456, 'Nord');
@@ -43,6 +43,13 @@
             $Florian->getNom();
             echo ' : ';
             $Florian->getPrixAbo();
+
+            $listeUtilisateurs = [$pierre, $mathilde, $Florian];
+
+            // Afficher la liste des utilisateurs
+            foreach ($listeUtilisateurs as $utilisateur) {
+                echo $utilisateur;
+            }
         ?>
         <p>Un paragraphe</p>
     </body>

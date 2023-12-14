@@ -21,12 +21,6 @@
         }
 
     }
-<<<<<<< HEAD:TP-1/classes/Admin.php
-<<<<<<< HEAD
 // script
-=======
->>>>>>> f9f49837f422fb1fe22d2eb14cb631b57f63e255
 
-=======
->>>>>>> 319582ec0c5b6affb1aa341daca23d9dc34e7fe9:classes/Admin.php
 ?>

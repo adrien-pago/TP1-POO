@@ -26,9 +26,8 @@
 
             }
          }
-         
-        public function __toString(){
-            echo $this( $n, $p, $r);
+         public function __toString() {
+            return "Nom: " . $this->user_name . ", Région: " . $this->user_region . ", Prix Abo: " . $this->prix_abo . "€\n";
         }
      }
 ?>

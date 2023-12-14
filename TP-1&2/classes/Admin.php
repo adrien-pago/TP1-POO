@@ -44,5 +44,8 @@
                 return $this->prix_abo = Utilisateur::ABONNEMENT /2;
             }
         }
+        public function __toString() {
+            return "Nom: " . $this->user_name . ", Région: " . $this->user_region . ", Prix Abo: " . $this->prix_abo . "€\n";
+        }
     }
 ?>

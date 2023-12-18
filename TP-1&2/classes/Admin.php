@@ -45,6 +45,14 @@
             }
         }
 
+        public function getPassword() {
+            return $this->user_pass;
+        }
+
+        public function enregistrer() {
+            // Code pour enregistrer un utilisateur Admin
+        }
+
         // Méthode toString pour afficher les informations de l'Admin
         public function __toString() {
             return "Nom: " . $this->user_name . ", Région: " . $this->user_region . ", Prix Abo: " . $this->prix_abo . "€\n";

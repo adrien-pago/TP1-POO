@@ -37,14 +37,17 @@
             }
         }
 
+        public function getPassword() {
+            return $this->user_pass;
+        }
+
+        public function enregistrer() {
+            // Code pour enregistrer un utilisateur Abonne
+        }
+
         // Méthode magique __toString pour afficher les informations de l'abonné
         public function __toString() {
             return "Nom: " . $this->user_name . ", Région: " . $this->user_region . ", Prix Abo: " . $this->prix_abo . "€\n";
         }
-
-        public function enregistrer() {
-            // Code pour enregistrer l'abonné dans la base de données
-        }
-        // ...
     }
 ?>

@@ -14,12 +14,14 @@
             Nom d'utilisateur: <input type="text" name="username"><br>
             Mot de passe: <input type="password" name="password"><br>
             <input type="submit" value="Se connecter">
-            <button id="btnCreateAccount">Créer un compte</button>
         </form>
+
+        <!-- Ajout d'un bouton pour ouvrir la fenêtre modale -->
+        <button id="btnCreateAccount">Créer un compte</button>
 
         <!-- Fenêtre modale de création de compte -->
         <div id="modalCreateAccount" style="display:none;">
-            <form action="createAccount.php" method="post">
+            <form action="/script/createAccount.php" method="post">
                 Nom d'utilisateur: <input type="text" name="username"><br>
                 Mot de passe: <input type="password" name="password"><br>
                 Région: <input type="text" name="region"><br>

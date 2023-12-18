@@ -32,7 +32,9 @@ CREATE TABLE `utilisateur` (
   `LIBELLE_ROLE` varchar(50) NOT NULL,
   `PRIX_ABO` int(11) NOT NULL,
   `REGION` varchar(50) NOT NULL,
-  `ID_ROLE` int(11) NOT NULL
+  `ID_ROLE` int(11) NOT NULL,
+  `NOM_UTILISATEUR` varchar(50) NOT NULL,
+  `MOT_DE_PASSE` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

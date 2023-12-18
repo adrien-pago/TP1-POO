@@ -5,11 +5,11 @@
         public function setPrixAbo();
         public function getPrixAbo();
        
+        public function enregistrer();
         public const ABONNEMENT = 15;  // Constante représentant le coût de l'abonnement
+         // ... autres méthodes ...
 
-        public function enregistrer() {
-            // Code pour enregistrer l'abonné dans la base de données
-        }
-        // ...
+       
+
     }
 ?>

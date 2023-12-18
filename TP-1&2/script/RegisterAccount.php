@@ -1,27 +1,19 @@
 <?php
+    require '../script/Database.php';
 
-class Database {
-    private $host = "localhost";
-    private $db_name = "authentification";
-    private $username = "root";
-    private $password = "";
-    private $conn;
-
-    public function __construct() {
-        try {
-            $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch(PDOException $exception) {
-            echo "Erreur de connexion: " . $exception->getMessage();
+    class Login {
+        private $db;
+    
+        public function __construct() {
+            $this->db = new Database();
         }
-    }
 
     public function registerUser($user) {
         try {
-            $query = "INSERT INTO utilisateur (NOM_UTILISATEUR, MOT_DE_PASSE, REGION, TYPE_COMPTE) VALUES (:username, :password, :region, :type_compte)";
+            $query = "INSERT INTO utilisateur (NOM, PASSWORD, REGION, LIBELLE_ROLE) VALUES (:registerUsername, :registerPassword, :region, :type_compte)";
 
             // Préparation de la requête
-            $stmt = $this->conn->prepare($query);
+            $stmt = $this->db->getConn()->prepare($query);
 
             // Nettoyage des données
             $username = htmlspecialchars(strip_tags($user->getNom()));
@@ -30,8 +22,8 @@ class Database {
             $type_compte = ($user instanceof Admin) ? 'admin' : 'abonne';
 
             // Liaison des paramètres
-            $stmt->bindParam(':username', $username);
-            $stmt->bindParam(':password', $password);
+            $stmt->bindParam(':registerUsername', $username);
+            $stmt->bindParam(':registerPassword', $password);
             $stmt->bindParam(':region', $region);
             $stmt->bindParam(':type_compte', $type_compte);
 

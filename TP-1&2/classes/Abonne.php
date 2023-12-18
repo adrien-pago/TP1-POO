@@ -41,6 +41,10 @@
             return $this->user_pass;
         }
 
+        public function getRegion() {
+            return $this->user_region;
+        }
+
         public function enregistrer() {
             // Code pour enregistrer un utilisateur Abonne
         }

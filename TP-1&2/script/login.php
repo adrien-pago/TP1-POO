@@ -1,6 +1,5 @@
 <?php
-
-require_once 'Database.php'; 
+require '../script/Database.php';
 
 class Login {
     private $db;
@@ -9,18 +8,19 @@ class Login {
         $this->db = new Database();
     }
 
+
     public function checkLogin($username, $password) {
         try {
-            $query = "SELECT * FROM utilisateur WHERE NOM_UTILISATEUR = :username LIMIT 1";
+            $query = "SELECT * FROM utilisateur WHERE NOM = :loginUsername LIMIT 1";
 
             // Préparation de la requête
-            $stmt = $this->db->prepare($query);
+            $stmt = $this->db->getConn()->prepare($query);
 
             // Nettoyage des données
             $username = htmlspecialchars(strip_tags($username));
 
             // Liaison des paramètres
-            $stmt->bindParam(':username', $username);
+            $stmt->bindParam(':loginUsername', $username);
 
             // Exécution de la requête
             $stmt->execute();
@@ -46,8 +46,8 @@ class Login {
 // Créez une instance de Login et vérifiez les informations de connexion
 $login = new Login();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $_POST['loginUsername'];
+    $password = $_POST['loginPassword'];
 
     $result = $login->checkLogin($username, $password);
     if($result) {

@@ -2,12 +2,12 @@
 require '../classes/Utilisateur.php';
 require '../classes/Admin.php';
 require '../classes/Abonne.php';
-require '../classes/Database.php'; // Assurez-vous d'avoir une classe pour gérer les interactions avec la base de données
+require '../classes/Database.php'; 
 
 // Vérifiez que le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $_POST['registerUsername'];
+    $password = $_POST['registerPassword'];
     $region = $_POST['region'];
     $accountType = $_POST['accountType'];
 

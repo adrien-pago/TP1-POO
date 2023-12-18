@@ -14,7 +14,29 @@
             Nom d'utilisateur: <input type="text" name="username"><br>
             Mot de passe: <input type="password" name="password"><br>
             <input type="submit" value="Se connecter">
+            <button id="btnCreateAccount">Créer un compte</button>
         </form>
+
+        <!-- Fenêtre modale de création de compte -->
+        <div id="modalCreateAccount" style="display:none;">
+            <form action="createAccount.php" method="post">
+                Nom d'utilisateur: <input type="text" name="username"><br>
+                Mot de passe: <input type="password" name="password"><br>
+                Région: <input type="text" name="region"><br>
+                Type de compte:
+                <select name="accountType">
+                    <option value="admin">Admin</option>
+                    <option value="abonne">Abonné</option>
+                </select><br>
+                <input type="submit" value="Créer un compte">
+            </form>
+        </div>
+
+        <script>
+            document.getElementById('btnCreateAccount').onclick = function() {
+                document.getElementById('modalCreateAccount').style.display = 'block';
+            };
+        </script>
 
         <?php
             // Inclusion des classes

@@ -41,5 +41,10 @@
         public function __toString() {
             return "Nom: " . $this->user_name . ", Région: " . $this->user_region . ", Prix Abo: " . $this->prix_abo . "€\n";
         }
+
+        public function enregistrer() {
+            // Code pour enregistrer l'abonné dans la base de données
+        }
+        // ...
     }
 ?>

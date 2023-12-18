@@ -1,16 +1,19 @@
 <?php
-    require '../script/Database.php';
+    require 'DataBase.php';
+    require '../classes/Abonne.php';
+    require '../classes/Admin.php';
+    require '../classes/Utilisateur.php';
 
-    class Login {
+    class UserManager {
         private $db;
-    
+       
         public function __construct() {
             $this->db = new Database();
         }
 
     public function registerUser($user) {
         try {
-            $query = "INSERT INTO utilisateur (NOM, PASSWORD, REGION, LIBELLE_ROLE) VALUES (:registerUsername, :registerPassword, :region, :type_compte)";
+            $query = "INSERT INTO utilisateur (NOM,`PASSWORD_USER`,REGION,LIBELLE_ROLE) VALUES (:registerUsername, :registerPassword, :region, :type_compte)";
 
             // Préparation de la requête
             $stmt = $this->db->getConn()->prepare($query);
@@ -29,7 +32,8 @@
 
             // Exécution de la requête
             if($stmt->execute()) {
-                return true;
+                $stmt->closeCursor();
+                return true;  
             }
 
             return false;

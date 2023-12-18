@@ -4,7 +4,7 @@
         <title>Cours PHP & MySQL</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <link rel="stylesheet" href="cours.css">
+        <link rel="stylesheet" href="style.css">
     </head>  
 
     <body>
@@ -47,9 +47,8 @@
             require 'classes/Admin.php';
             require 'classes/Abonne.php';
 
-            // créer une liste de tout les utilisateur enregistrer en base de donné
+            // créer une liste de tout les utilisateur enregistrer en base de donné pour avoir un aperçu des personne enregistré
 
         ?>
-        <p>Un paragraphe</p>
     </body>
 </html>

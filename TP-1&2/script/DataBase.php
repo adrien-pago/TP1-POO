@@ -18,5 +18,9 @@ class Database {
     public function getConn() {
         return $this->conn;
     }
+    public function closeconnect(){
+        $this ->conn = null;
+    }
+
 }
 ?>

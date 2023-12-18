@@ -1,4 +1,5 @@
 <?php
+require 'Utilisateur.php';
     // Classe Admin implémentant l'interface Utilisateur
     class Admin implements Utilisateur {
         // Déclaration des propriétés
@@ -18,6 +19,9 @@
         // Méthodes implémentées de l'interface
         public function getNom(){
             echo $this->user_name;
+        }
+        public function setNom($nom){
+            $this->user_name = $nom;
         }
         public function getPrixAbo(){
             echo $this->prix_abo;
@@ -44,6 +48,7 @@
                 $this->prix_abo = Utilisateur::ABONNEMENT / 2;
             }
         }
+      
 
         public function getPassword() {
             return $this->user_pass;

@@ -1,6 +1,8 @@
 <?php
-require '../script/Database.php';
-
+require 'Database.php';
+require '../classes/Abonne.php';
+require '../classes/Admin.php';
+require '../classes/Utilisateur.php';
 class Login {
     private $db;
 
